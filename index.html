@@ -264,6 +264,7 @@
         if(rtLanguages.includes(lang))
         {
           htmlElement.setAttribute('dir','rtl');
+          htmlElement.getElementById("h3").style.fontSize="small";
         }
         else{
           htmlElement.setAttribute('dir','ltr');
@@ -272,6 +273,7 @@
       function observeGoogleTranslate(){
         const observer=new MutationObserver(() =>{
           applyRt();
+          
         });
         observer.observe(document.documentElement, {attributes: true, attributeFilter: ['lang']});
       }
