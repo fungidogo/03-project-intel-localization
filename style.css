@@ -3,11 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
-h2,h3{
+body{
+  background-color: rgb(201, 212, 218);
+}
+.timelineCards h2,h3{
   display:flex;
   align-items: center;
   text-align:center;
+  font-size:large;
   padding:10px;
   border-radius: 10px;
   background: linear-gradient(0deg, rgb(27, 95, 61) 6%, rgb(110, 202, 249) 92%);
@@ -18,7 +23,7 @@ p{
   display:flex;
   justify-content: center;
   align-items: flex-end;
-  flex-wrap:nowrap;
+  flex-flow: row wrap;
   font-family: 'Times New Roman', Times, serif;
   padding-top: 20px;
 }
@@ -76,16 +81,16 @@ img{
   position: relative;
   display: flex;
   flex-flow:column nowrap;
-  margin:10px;
-  padding-bottom: 15px;
-  
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  background-color: rgb(201, 212, 218);
 }
 .card p{
   display:flex;
   justify-content: flex-start;
   align-items: center;
   position: absolute;
-  font-size: larger;
+  font-size: medium;
   top: 0;
   bottom: 0;
   right:0;
@@ -102,6 +107,39 @@ img{
 .card p:hover{
   opacity: 100%;
 }
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+a{
+  color:rgb(215, 215, 215);
+}
+a:hover{
+  color:rgba(181, 181, 181, 0.832);
+}
+a:visited{
+  color:rgba(189, 174, 255, 0.832)
+}
+#formh2{
+  text-align: center;
+  padding:20px;
+}
+.form{
+  background: linear-gradient(0deg, rgb(146, 146, 146) 0%, rgb(166, 183, 175) 6%, rgb(110, 202, 249) 92%);
+  padding:20px;
+  border-radius: 10px;
+}
+
+footer{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
 
 @media (max-width: 600px){
   .hero{
@@ -117,5 +155,13 @@ img{
   }
   .timelineCards p{
     font-size:90%;
+  }
+  .form{
+    display:flex;
+    align-items: center;
+    flex-flow:column wrap;
+  }
+  .form-control{
+    max-width: fit-content;
   }
 }
